@@ -1,14 +1,16 @@
+import { Link } from "react-router-dom";
 import { CartItem } from "./cartItem";
 
 function NavBar(){
 
     return(
         <div className="navbar">
-            <h1>Trendcity</h1>
+            <Link to="/"><h1 className="logo">Trendcity</h1></Link>
             <ul>
-                <li><a href="#">Remeras</a></li>
-                <li><a href="#">Shorts</a></li>
-                <li><a href="#">Zapatillas</a></li>
+                <li><Link to="/productos">Productos</Link></li>
+                <li><Link to="/productos/remeras">Remeras</Link></li>
+                <li><Link to="/productos/pantalones">Pantalones</Link></li>
+                <li><Link to="/productos/zapatillas">Zapatillas</Link></li>
             </ul>
             <CartItem/>
         </div>
